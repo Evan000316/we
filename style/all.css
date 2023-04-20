@@ -116,6 +116,19 @@ img {
     margin-bottom: 2rem;
 }
 
+.banner-title-line {
+    position: relative;
+}
+
+.banner-title-line::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    border: solid 4px rgba(255, 255, 255, .3);
+    width: 1.5em;
+}
+
 .banner-small {
     display: block; /* small 預設inline */
     text-transform: uppercase;
@@ -168,6 +181,15 @@ img {
     line-height: 1.6;
 }
 
+.banner-desc + .banner-desc {
+    margin-top: 1rem;
+}
+
+.banner-desc-lg {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
 .banner-btns {
     margin-top: 2rem;
 }
@@ -210,6 +232,11 @@ img {
     bottom: -2rem;
 }
 
+.banner-img-fit {
+    height: 400px;
+    object-fit: cover; 
+}
+
 .banner-index, .banner-head, .banner-body {
     padding-top: 3rem;
 }
@@ -226,6 +253,78 @@ img {
     
 }
 
+.banner-service .banner-img-fit {
+    object-position: 0 -244px;
+}
+
+.banner-about .banner-img-fit {
+    object-position: 0 -194px;
+}
+
+/* --------------------- footer --------------------- */
+
+.footer {
+    background-color: #666;
+    display: flex;
+    justify-content: space-between; /* 分散對齊 */
+    align-items: flex-end;
+    padding: 7rem 1rem 1rem;
+
+    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+}
+
+.footer-img-logo {
+    max-width: 40px;
+    height: auto;
+    margin-bottom: .5rem;
+}
+
+.footer-desc {
+    font-size: .9rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-ul {
+    display: flex;
+}
+
+.footer-li {
+    margin-left: 1rem;
+}
+
+.footer-link {
+    color: #fff;
+    font-size: .9rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    transition-duration: .3s;
+}
+
+.footer-link:hover {
+    color: #cf7688;
+}
 
 
+/* --------------------- aside --------------------- */
 
+.aside {
+    z-index: 10;
+    position: fixed;
+    right: 1rem;
+    bottom: 15rem;
+}
+
+.aside-link {
+    color: rgba(0, 0, 0, .2);
+    transition-duration: .3s;
+}
+
+.aside-link:hover {
+    color: rgba(0, 0, 0, .5);
+}
+
+.aside-link-top {
+    font-size: 3rem;
+}
