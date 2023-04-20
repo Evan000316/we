@@ -237,9 +237,13 @@ img {
     object-fit: cover; 
 }
 
-.banner-index, .banner-head, .banner-body {
+.banner-index {
     padding-top: 3rem;
 }
+
+/* .banner-index, .banner-head, .banner-body {
+    padding-top: 3rem;
+}  why */ 
 
 .banner-index .banner-head{
     width: 40%;
