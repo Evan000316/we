@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* ------------------- card ------------------- */
+
+.card {
+    position: relative;
+}
+
+.card-head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+
+    /* 絕對置中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-duration: .3s;
+    opacity: 0;
+    /* display: none; */
+}
+
+.card-title {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    text-align: center;
+    width: 80%;
+}
+
+.card-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card:hover .card-head {
+    /* 這邊因為排版是用flex 所以不能用block */
+    /* display: flex; */
+    opacity: 1;
+}
+
