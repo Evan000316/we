@@ -225,6 +225,7 @@ img {
 .banner-img-mobile {
     left: 0;
     bottom: 5rem;
+    z-index: 1;
 }
 
 .banner-img-pad {
@@ -331,4 +332,103 @@ img {
 
 .aside-link-top {
     font-size: 3rem;
+}
+
+
+/* --------------- animation --------------- */
+
+
+@keyframes moveDownToUp {
+    /* from {
+        transform: translateY(120%);
+    } */ to {
+        transform: translateY(0);
+    }
+}
+
+.animation-move-downToTop {
+    /* transform: translateY(600px); */
+    transform: translateY(120%);  /* 初始位置 */
+    animation-name: moveDownToUp;
+    animation-duration: .5s; /* 要加動畫時常才有動畫 */
+    
+    /*animation-fill-mode: forwards;*/  /* 播完會回到原點，所以要讓他停住 */
+    /* transform: translateY(0); 土寫法*/   
+}
+
+@keyframes moveLefToRight {
+    /* from {
+        transform: translateX(-200%);
+        opacity: 0;
+    } */to { 
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animation-move-leftToRight {
+    transform: translateX(-100%); 
+    animation-name: moveLefToRight;
+    animation-duration: 1s; 
+    /* animation-fill-mode: forwards; */
+    opacity: 0;
+}
+
+.animation-move-downToTop, .animation-move-leftToRight {
+    animation-fill-mode: forwards;
+    display: inline-block; /* 做動畫 為啥*/
+}
+
+.animation-delay-1 {
+    animation-delay: .3s;
+}
+
+.animation-delay-2 {
+    animation-delay: .6s;
+}
+
+.animation-delay-3 {
+    animation-delay: .9s;
+}
+
+.animation-delay-4 {
+    animation-delay: 1s;
+}
+
+.animation-delay-5 {
+    animation-delay: 1.1s;
+}
+
+.animation-delay-6 {
+    animation-delay: 1.2s;
+}
+
+.animation-delay-7 {
+    animation-delay: 1.3s;
+}
+
+/* --------------- Media Query --------------- */
+
+@media screen and (max-width: 480px) {
+    .header {
+        background-color: rgba(255, 255, 255, .7);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+    }
+
+    .header-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-ul {
+        flex-direction: column;
+        background-color: transparent;
+    }
 }

@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/* --------------- process --------------- */
+
+.process-item {
+    display: flex;
+}
+
+.process-item:hover .process-head {
+    background-color: #cf7688;
+}
+
+.process-item + .process-item {
+    margin-top: 2rem;
+}
+
+.process-head {
+    width: 30%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .3s;
+}
+
+.process-body {
+    width: 70%;
+    background-color: #fff;
+}
+
+.process-name {
+    color: rgba(255, 255, 255, .7);
+}
+
+.process-cht, .process-en {
+    display: block;
+}
+
+.process-cht {
+    font-size: 2.5rem;
+}
+
+.process-en {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: .5rem;
+}
+
+.process-ol {
+    list-style-type: decimal;
+    display: flex;
+    
+    flex-wrap: wrap;  /* flex 預設不換行，用wrap強制換行 */
+
+    list-style-position: inside; /* 讓marker 回到框框內 */
+}
+
+.process-li {
+    padding: 2rem; /* padding不算進50%,所以看起來會>50% */
+    width: 50%;
+    box-sizing: border-box;  /* 用box-sizing解決padding不算進50%,所以看起來會>50%的問題 */
+}
+
+.process-title {
+    color: #cf7688;
+    font-size: 1.25rem;
+    font-weight: 600;
+    /* 解決list-style-position: inside; 標題換行的問題 */
+    display: inline; 
+}
+
+.process-desc {
+    margin-top: .5rem;
+    color: rgba(0, 0, 0, .7);
+    line-height: 1.5;
+}
+
+.process-li::marker {
+    color: #cf7688;
+    font-size: 1.5rem;
+}
