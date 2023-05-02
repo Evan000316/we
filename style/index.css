@@ -320,15 +320,37 @@
     animation-delay: 1.3s;
 }
 
-/* .banner-img-desktop {
+@media screen and (max-width: 480px){
+
+    /* ------------------ service ------------------ */
+    .service-items {
+        flex-direction: column;
+    }
     
+    .service-item {
+        width: 100%;
+    }
+
+    /* ------------------ project ------------------ */
+
+    .project-item {
+        width: 33.333333%;
+    }
+
+    /* ------------------ base ------------------ */
+
+    .base-intro {
+        clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+    }
+
+    .base-intro .base-head,
+    .base-intro .base-btns {
+        text-align: center;
+    }
+
+    .base-build .base-body {
+        max-width: 55vw;
+    }
+
 }
-
-.banner-img-pad {
-
-}
-
-.banner-img-mobile {
-
-} */
 

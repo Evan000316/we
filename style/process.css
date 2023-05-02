@@ -61,6 +61,10 @@
     box-sizing: border-box;  /* 用box-sizing解決padding不算進50%,所以看起來會>50%的問題 */
 }
 
+.process-li:nth-child(n + 3) {
+    padding-top: 0;
+}
+
 .process-title {
     color: #cf7688;
     font-size: 1.25rem;
@@ -78,4 +82,33 @@
 .process-li::marker {
     color: #cf7688;
     font-size: 1.5rem;
+}
+
+@media screen and (max-width: 480px) {
+    /* ---------------- process ---------------- */
+    
+    .process-item, .process-ol {
+        flex-direction: column;
+    }
+
+    .process-head, .process-body, .process-li {
+        /* width: 100%; */ /* 用100%再加padding 會超過 100% */
+        width: auto;
+        /* or */
+        /* box-sizing: border-box; */
+    }
+     
+    .process-head {
+        padding: 1rem; 
+    }
+
+    .process-li {
+        padding: 0;
+        margin: 1rem;
+    }
+
+    .process-name {
+        text-align: center;
+    }
+
 }
